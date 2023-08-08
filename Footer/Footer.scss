@@ -1,0 +1,131 @@
+:root {
+  --PrimarycOLOR: hsl(199, 100%, 33%);
+  --SecodaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 60%),
+    hsl(199, 95%, 45%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: black;
+  --textColor: gray;
+  --inputColor: rgb(239, 239, 249);
+  --bodyColor: rgb(240, 240, 245);
+  --cardBG: rgb(225, 225, 235);
+}
+body {
+  overflow-x: hidden;
+}
+.footer {
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 0;
+
+  .videoDiv {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  video {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .secContent {
+    width: 100%;
+    height: max-content;
+    padding: 5rem 3rem 9rem;
+    display: flex;
+    row-gap: 3rem;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin: auto;
+    color: var(--whiteColor);
+    z-index: 100;
+
+    small {
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 45px;
+      font-weight: 500;
+    }
+  }
+  .inputDiv {
+    padding: 15px;
+    gap: 20px;
+    width: 250%;
+
+    input {
+      width: 300px;
+      padding: 10px;
+    }
+  }
+}
+.contactsDiv {
+  max-width: 600px;
+  gap: 30px;
+  margin-top: 20px;
+  position: relative;
+  padding: 2rem 1rem;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.9) 70%,
+    rgba(255, 255, 255, 0.9) 70%
+  );
+  border-radius: 10px;
+
+  .services {
+    cursor: pointer;
+    font-weight: 500;
+    h3 {
+      color: aqua;
+    }
+
+    li {
+      color: var(--textColor);
+
+      &:hover {
+        color: rgb(106, 203, 233);
+        transform: translateX(10px);
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .secContent {
+    width: 100%;
+    display: flex 1;
+    row-gap: 10px;
+    .inputDiv {
+      gap: 10px;
+
+      input {
+        width: 270px;
+      }
+    }
+  }
+  .contactsDiv {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 20px;
+    gap: 20px;
+  }
+}
+.copyright{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #494747;
+    padding: 10px;
+    
+}

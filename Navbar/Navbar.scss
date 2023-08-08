@@ -1,0 +1,132 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecodaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 60%),
+    hsl(199, 95%, 45%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: black;
+  --textColor: rgb(31, 30, 30);
+  --grayText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 249);
+  --bodyColor: rgb(240, 240, 245);
+  --cardBG: rgb(225, 225, 235);
+}
+body {
+  overflow-x: hidden;
+}
+.header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--inputColor);
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(120, 121, 122, 0.904);
+  z-index: 1000;
+}
+.logo {
+  color: rgb(7, 228, 228);
+  font-weight: 600;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+
+  .icon {
+    font-size: 25px;
+    transform: translate(5px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .logoDiv {
+    h1{ 
+      font-size: 20px;
+    }
+  }
+  .navBar {
+    position: absolute;
+    background: var(--bodyColor);
+    height: max-content;
+    width: 80%;
+    border-radius: 1rem;
+    top: -30rem;
+    left: 50%;
+    padding: 1rem;
+    transform: translate(-50%);
+    z-index: 2000;
+    box-shadow: 0 2px 4px rgba(7, 25, 44, 0.904);
+    transition: 0.1s ease-in-out;
+  }
+  .activeNavbar {
+    top: 10rem;
+  }
+  .navLists {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    padding: 0.5rem 0;
+
+    .navItem {
+      padding:0 0.5rem ;
+      
+
+      .navLink {
+        color: var(--textColor);
+        font-size: 0.9rem;
+        font-weight: 600;
+        &:hover {
+          color: var(--PrimaryColor);
+        }
+      }
+    }
+
+    .btn {
+      margin-top: 1rem;
+
+      a {
+        font-weight: 700;
+        color: var(--whiteColor);
+      }
+    }
+
+    .closeNavbar {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      color: var(--PrimaryColor);
+      cursor: pointer;
+      &:hover {
+        color: gray;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .toggleNavbar,
+  .closeNavbar {
+    display: none;
+  }
+  
+
+  .navItem {
+    .navLink {
+      color: var(--textColor);
+      padding: 0 0.5rem;
+      font-size: 0.8rem;
+      &:hover {
+        color: var(--PrimaryColor);
+      }
+    }
+  }
+  .btn{
+    margin-left: 1rem;
+  }
+}
+
+ 
+  
